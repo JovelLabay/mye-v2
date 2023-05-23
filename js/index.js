@@ -191,6 +191,7 @@ function updateDetails(index) {
   detailsDiv.innerHTML = "";
 
   var imageElement = document.createElement("img");
+  imageElement.classList.add("animate");
 
   if (index === 1) {
     imageElement.src = "/public/icons/accord1.png";
@@ -217,6 +218,7 @@ function updateDetails(index) {
 
   var nameElement = document.createElement("h3");
   nameElement.textContent = items[index].name;
+  nameElement.classList.add("animate");
 
   detailsDiv.appendChild(nameElement);
 
@@ -229,6 +231,7 @@ function updateDetails(index) {
     var li = document.createElement("li");
     li.textContent = detail;
     ul.appendChild(li);
+    li.classList.add("animate");
   });
 
   detailsDiv.appendChild(ul);
