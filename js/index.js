@@ -29,6 +29,39 @@ for (i = 0; i < acc.length; i++) {
   panel.style.display = "none";
 }
 
+const circle = document.querySelector(".carousel");
+
+const handleScroll = function () {
+  const scrollTop = window.pageYOffset;
+  const parentHexa = document.querySelector("#the-parent");
+
+  if (scrollTop < 800) {
+    circle.classList.remove("hexa2");
+
+    circle.classList.add("hexa1");
+  } else if (scrollTop < 1000) {
+    circle.classList.remove("hexa1");
+    circle.classList.remove("hexa3");
+
+    circle.classList.add("hexa2");
+  } else if (scrollTop < 1100) {
+    circle.classList.remove("hexa2");
+    circle.classList.remove("hexa4");
+
+    circle.classList.add("hexa3");
+
+    parentHexa.classList.add("parent-curve");
+  } else if (scrollTop < 1200) {
+    circle.classList.remove("hexa3");
+
+    circle.classList.add("hexa4");
+
+    parentHexa.classList.remove("parent-curve");
+  }
+};
+
+window.addEventListener("scroll", handleScroll);
+
 const pop1 = document.querySelector("#pop-1");
 const pop1Content = document.querySelector("#pop1-content");
 
