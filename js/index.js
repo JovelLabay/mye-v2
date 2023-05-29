@@ -194,23 +194,23 @@ function updateDetails(index) {
   imageElement.classList.add("animate");
 
   if (index === 1) {
-    imageElement.src = "/public/icons/accord1.png";
+    imageElement.src = "/public/images/prod1.gif";
   } else if (index === 2) {
-    imageElement.src = "/public/icons/accord2.png";
+    imageElement.src = "/public/images/prod2.gif";
   } else if (index === 3) {
-    imageElement.src = "/public/icons/accord3.png";
+    imageElement.src = "/public/images/prod3.png";
   } else if (index === 4) {
-    imageElement.src = "/public/icons/accord4.png";
+    imageElement.src = "/public/images/prod4.gif";
   } else if (index === 5) {
-    imageElement.src = "/public/icons/accord5.png";
+    imageElement.src = "/public/images/prod5.gif";
   } else if (index === 6) {
-    imageElement.src = "/public/icons/accord6.png";
+    imageElement.src = "/public/images/prod6.gif";
   } else if (index === 7) {
-    imageElement.src = "/public/icons/accord7.png";
+    imageElement.src = "/public/images/prod7.gif";
   } else if (index === 8) {
-    imageElement.src = "/public/icons/accord8.png";
+    imageElement.src = "/public/images/prod8.gif";
   } else {
-    imageElement.src = "/public/icons/accord9.png";
+    imageElement.src = "/public/images/prod1.gif";
   }
   imageElement.alt = "Title Image";
 
@@ -225,13 +225,15 @@ function updateDetails(index) {
   var details = items[index].details;
 
   var ul = document.createElement("ul");
-  ul.style.listStyleType = "disc";
+  ul.classList.add("details-prod");
+  ul.style.listStyleType = "none";
 
   details.forEach(function (detail) {
     var li = document.createElement("li");
     li.textContent = detail;
     ul.appendChild(li);
     li.classList.add("animate");
+    li.classList.add("details-prod-child");
   });
 
   detailsDiv.appendChild(ul);

@@ -230,7 +230,7 @@
         </div>
 
         <div class="part-4">
-            <div class="about-container">
+            <div class="about-container parent-curve">
                 <div class="mt-1">
                     <h1 class="animate">About Us</h1>
 
@@ -304,6 +304,10 @@
                             trends and data.</p>
                 </li>
             </ul>
+
+            <div class="read-more">
+                <button>Read more blogs</button>
+            </div>
         </div>
 
         <div class="part-12">
@@ -315,7 +319,7 @@
                         environment. Make an impact, grow
                         professionally, and enjoy work-life balance.</p>
                     <p class="logo animate">Apply today and unlock your full potential with us.</p>
-                    <button class="logo animate">Learn more</button>
+                    <button class="logo animate">View Openings</button>
                 </div>
                 <img class="animate" src="/public/images/about-image3png.png" alt="About Us">
             </div>
@@ -364,6 +368,18 @@
     <!-- CUSTOM SCRIPTS -->
     <script type="module" src="/js/main.js"></script>
     <script type="module" src="/js/index.js"></script>
+    <svg style="visibility: hidden;position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
+        version="1.1">
+        <defs>
+            <filter id="parent-curve">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"></feGaussianBlur>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                    result="goo">
+                </feColorMatrix>
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+            </filter>
+        </defs>
+    </svg>
 
 </body>
 
