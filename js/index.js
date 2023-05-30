@@ -71,6 +71,9 @@ const pop2Content = document.querySelector("#pop2-content");
 const pop3 = document.querySelector("#pop-3");
 const pop3Content = document.querySelector("#pop3-content");
 
+const pop4 = document.querySelector("#pop-4");
+const pop4Content = document.querySelector("#pop4-content");
+
 pop1.addEventListener("mouseenter", () => {
   pop1Content.classList.add("popup-content1-show");
   document.querySelector("#dot-1-line").style.display = "block";
@@ -102,6 +105,17 @@ pop3.addEventListener("mouseout", () => {
   pop3Content.classList.remove("popup-content3-show");
   document.querySelector("#dot-3-line").style.display = "none";
   document.querySelector("#dot-3-round").style.display = "none";
+});
+
+pop4.addEventListener("mouseenter", () => {
+  pop4Content.classList.add("popup-content4-show");
+  document.querySelector("#dot-4-line").style.display = "block";
+  document.querySelector("#dot-4-round").style.display = "block";
+});
+pop4.addEventListener("mouseout", () => {
+  pop4Content.classList.remove("popup-content4-show");
+  document.querySelector("#dot-4-line").style.display = "none";
+  document.querySelector("#dot-4-round").style.display = "none";
 });
 
 // Array object containing the data
@@ -258,6 +272,7 @@ function updateDetails(index) {
   var details = items[index].details;
 
   var ul = document.createElement("ul");
+  ul.classList.add("animate");
   ul.classList.add("details-prod");
   ul.style.listStyleType = "none";
 
@@ -288,3 +303,51 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll(".animate");
 hiddenElements.forEach((el) => observer.observe(el));
+
+const logoItems = document.querySelectorAll(".part-9 ul li.logo");
+const active = document.querySelector(".part-9 ul");
+const descriptions = document.querySelectorAll(".part-9 .main-list div p");
+const headers = document.querySelectorAll(".part-9 .main-list div h5");
+
+function expandItem() {
+  logoItems.forEach((item) => {
+    if (item === this) {
+      active.classList.add("expand");
+      item.classList.add("expanded");
+
+      descriptions.forEach((desc) => {
+        if (item.id === desc.className) {
+          desc.classList.add("show-desc");
+        } else {
+          desc.classList.remove("show-desc");
+        }
+      });
+
+      headers.forEach((desc) => {
+        if (item.id === desc.className) {
+          desc.style.transform = "rotate(0deg)";
+          desc.style.marginBottom = "50px";
+        }
+      });
+    } else {
+      item.classList.remove("expanded");
+
+      descriptions.forEach((desc) => {
+        if (item.id === desc.className) {
+          desc.style.display = "none";
+        }
+      });
+
+      headers.forEach((desc) => {
+        if (item.id === desc.className) {
+          desc.style.transform = "rotate(90deg)";
+          desc.style.marginBottom = "100px";
+        }
+      });
+    }
+  });
+}
+
+logoItems.forEach((item) => {
+  item.addEventListener("click", expandItem);
+});

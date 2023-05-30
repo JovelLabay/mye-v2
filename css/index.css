@@ -479,14 +479,14 @@
     gap: 10px;
     margin: 0;
     padding: 0;
-    overflow-y: auto;
+    overflow-y: hidden;
     max-height: 295px;
 }
 
 .details-prod .details-prod-child {
     text-align: center;
     width: 170px;
-    height: 170px;
+    height: 139px;
     background-color: #fff;
     color: var(--violet-color);
     padding: 10px;
@@ -495,10 +495,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 14px;
 }
 
 /* SCROLL HANDLERS */
-.details-prod::-webkit-scrollbar {
+/* .details-prod::-webkit-scrollbar {
     width: 16px;
     background-color: var(--violet-color-light);
     border-radius: 9999px;
@@ -515,7 +516,7 @@
     background-clip: content-box;
     min-width: 32px;
     min-height: 32px;
-}
+} */
 
 /* PART 8 */
 .part-8 {
@@ -553,13 +554,15 @@
 
 .popup-content1,
 .popup-content2,
-.popup-content3 {
+.popup-content3,
+.popup-content4 {
     display: none;
 }
 
 .popup-content1-show h2,
 .popup-content2-show h2,
-.popup-content3-show h2 {
+.popup-content3-show h2,
+.popup-conten4-show h2 {
     margin-bottom: 10px;
 }
 
@@ -751,6 +754,68 @@
     display: none;
 }
 
+/* POP 4 */
+
+.part-8 .mt-1 .one .image-container #pop-4 {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.part-8 .mt-1 .one .image-container #dot-4 {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: var(--main-color);
+    border-radius: 9999px;
+    box-shadow: 0px 0px 6px 6px rgba(77, 223, 171, 0.6);
+    animation: blink 1s ease-in-out infinite;
+    position: absolute;
+    z-index: 9;
+    top: 15%;
+    left: 50%;
+}
+
+.popup-content4-show {
+    position: absolute;
+    top: -20px;
+    left: 200px;
+    min-height: 100px;
+    min-width: 250px;
+    border-radius: 20px;
+    padding: 30px;
+    display: block;
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+#dot-4-line {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 17%;
+    left: 51%;
+    width: 140px;
+    height: 5px;
+    z-index: 20;
+    display: none;
+}
+
+#dot-4-round {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 15.5%;
+    left: 50.2%;
+    border-radius: 9999px;
+    width: 20px;
+    height: 20px;
+    z-index: 9;
+    display: none;
+}
+
 /* ===== KEY FRAMES ===== */
 @keyframes blink {
     0% {
@@ -797,6 +862,21 @@
     height: 600px;
 }
 
+.expand {
+    grid-template-columns: repeat(8, 1fr) !important;
+    transition: 6000s ease-in;
+}
+
+.part-9 ul li {
+    list-style: none;
+    min-height: 450px;
+}
+
+.part-9 ul li.expanded {
+    grid-column: span 5;
+    transition: 6000s ease-in;
+}
+
 .part-9 ul li:nth-child(1) {
     background-image: url("/public/images/mask1.png");
     background-position: center;
@@ -829,52 +909,49 @@
     position: relative;
 }
 
-.part-9 ul li:nth-child(1) div,
-.part-9 ul li:nth-child(2) div,
-.part-9 ul li:nth-child(3) div,
-.part-9 ul li:nth-child(4) div {
+.part-9 ul li div {
+    bottom: 0;
     position: absolute;
     height: 100%;
     width: 100%;
     background: linear-gradient(180deg, rgba(73, 159, 254, 0) 0%, #003065 57.29%, #000000 100%);
     opacity: 0.9;
-    animation: 300ms;
     cursor: pointer;
 }
 
-.part-9 ul li:nth-child(1) div:hover,
-.part-9 ul li:nth-child(2) div:hover,
-.part-9 ul li:nth-child(3) div:hover,
-.part-9 ul li:nth-child(4) div:hover {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+.part-9 ul li div:hover {
     background: var(--violet-color);
     opacity: 0.7;
 }
 
-.part-9 ul li:nth-child(1) div:hover p,
-.part-9 ul li:nth-child(2) div:hover p,
-.part-9 ul li:nth-child(3) div:hover p,
-.part-9 ul li:nth-child(4) div:hover p {
+.part-9 .main-list #one div,
+.part-9 .main-list #two div,
+.part-9 .main-list #three div,
+.part-9 .main-list #four div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: start;
+    gap: 10px;
+    color: #fff;
+}
+
+.part-9 .main-list #one div h5,
+.part-9 .main-list #two div h5,
+.part-9 .main-list #three div h5,
+.part-9 .main-list #four div h5 {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+}
+
+.part-9 ul li div:hover p {
     padding: 0 20px;
     width: 100%;
     display: block;
     text-align: left;
     margin-top: -20px;
     color: #fff;
-}
-
-.part-9 ul li {
-    list-style: none;
-    min-height: 450px;
-}
-
-.part-9 ul li div {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
 }
 
 .part-9 ul li div h5 {
@@ -884,11 +961,25 @@
     margin-bottom: 40px;
 }
 
-.part-9 ul li div p {
+.part-9 .main-list div p {
     display: none;
 }
 
+.show-desc {
+    padding: 0 20px !important;
+    width: 100% !important;
+    display: block !important;
+    text-align: left !important;
+    margin-top: -20px !important;
+    color: #fff !important;
+}
+
+.show-desc-noshow {
+    display: none !important;
+}
+
 /* PART 12 */
+
 .part-12 {
     padding: 60px 0;
 }
@@ -1050,7 +1141,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: -30px;
 }
 
 .part-13 .read-more button {
