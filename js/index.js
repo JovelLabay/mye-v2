@@ -142,12 +142,12 @@ pop1.addEventListener("mouseout", () => {
 });
 
 pop2.addEventListener("mouseenter", () => {
-  pop1Content.classList.add("popup-content2-show");
+  pop2Content.classList.add("popup-content2-show");
   document.querySelector("#dot-2-line").style.display = "block";
   document.querySelector("#dot-2-round").style.display = "block";
 });
 pop2.addEventListener("mouseout", () => {
-  pop1Content.classList.remove("popup-content2-show");
+  pop2Content.classList.remove("popup-content2-show");
   document.querySelector("#dot-2-line").style.display = "none";
   document.querySelector("#dot-2-round").style.display = "none";
 });

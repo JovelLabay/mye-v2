@@ -575,7 +575,7 @@
 .popup-content1-show h2,
 .popup-content2-show h2,
 .popup-content3-show h2,
-.popup-conten4-show h2 {
+.popup-content4-show h2 {
     margin-bottom: 10px;
 }
 
@@ -671,9 +671,9 @@
 .popup-content2-show {
     position: absolute;
     top: 20%;
-    left: 380px;
+    left: 180px;
     min-height: 100px;
-    min-width: 250px;
+    min-width: 350px;
     border-radius: 20px;
     padding: 30px;
     display: block;
