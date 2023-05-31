@@ -95,54 +95,30 @@
     background: var(--violet-color)
 }
 
-/* --- */
-.parallax-container {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
+/* ---- */
 
-.bg-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/public/images/bg-join-2.png');
-    background-size: cover;
-    background-position: center;
+#parent {
+    position: relative;
 }
 
 .hexa1 {
-    clip-path: polygon(51% 36%, 69% 44%, 69% 61%, 52% 70%, 34% 62%, 34% 44%);
+    clip-path: polygon(51% 4%, 78% 23%, 78% 66%, 50% 87%, 23% 66%, 23% 24%);
     height: 100%;
     width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     transition: 1s ease-out
 }
 
 .hexa2 {
-    clip-path: polygon(51% 26%, 65% 35%, 65% 57%, 51% 67%, 37% 57%, 37% 35%);
+    clip-path: polygon(51% 0, 82% 23%, 82% 73%, 51% 100%, 18% 74%, 18% 23%);
     height: 100%;
     width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     transition: 1s ease-out
 }
 
 .hexa3 {
-    clip-path: polygon(51% 14%, 82% 30%, 82% 68%, 50% 85%, 19% 68%, 19% 29%);
+    clip-path: polygon(51% 0, 93% 22%, 93% 78%, 51% 100%, 7% 76%, 7% 22%);
     height: 100%;
     width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     transition: 1s ease-out
 }
 
@@ -150,73 +126,100 @@
     clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
     height: 100%;
     width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
     transition: 1s ease-out
 }
 
-.carousel-item {
-    height: 100vh;
+/* ------ */
+
+.card-container {
+    width: 100%;
+}
+
+#my-card {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--cards), var(--cardHeight));
+    gap: var(--cardMargin);
+    padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+    margin-bottom: var(--cardMargin);
+}
+
+#card1 {
+    --index: 1;
+}
+
+#card2 {
+    --index: 2;
+}
+
+#card3 {
+    --index: 3;
+}
+
+.the-card {
+    position: sticky;
+    top: 0;
+    padding-top: calc(var(--index) * var(--cardTopPadding));
+    padding-right: calc(var(--index) * var(--cardTopPadding));
+}
+
+#card1 .card-body,
+#card2 .card-body,
+#card3 .card-body {
+    height: 90vh;
+    color: #fff;
     background-image: url("/public/images/bg-join-3.png");
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
 }
 
-.carousel-item #one {
+
+#card1 .card-body div {
     background-color: rgb(115, 109, 255, 0.5);
-    height: 100%;
 }
 
-.carousel-item #two {
+#card2 .card-body div {
     background-color: rgb(9, 186, 229, 0.5);
-    height: 100%;
 }
 
-.carousel-item #three {
+#card3 .card-body div {
     background-color: rgb(54, 123, 252, 0.5);
-    height: 100%;
 }
 
-.carousel-item #one .item,
-.carousel-item #two .item,
-.carousel-item #three .item {
-    max-width: 1200px;
-    margin: 0 auto;
+#card1 .card-body div,
+#card2 .card-body div,
+#card3 .card-body div {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
     width: 100%;
     height: 100%;
+    padding: 0 150px;
 }
 
-.carousel-item #one .item div,
-.carousel-item #two .item div,
-.carousel-item #three .item div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    width: 100%;
-}
-
-.carousel-item .item h1 {
+#card1 .card-body div h1,
+#card2 .card-body div h1,
+#card3 .card-body div h1 {
     color: #fff;
     font-weight: 700;
     text-align: right;
 
 }
 
-.carousel-item .item p {
+#card1 .card-body div p,
+#card2 .card-body div p #card3 .card-body div p {
     color: #fff;
     text-align: right;
 }
 
-.carousel-item .item button {
+#card1 .card-body div button,
+#card2 .card-body div button,
+#card3 .card-body div button {
     width: 200px;
     border-radius: 9999px;
     background-color: #fff;
@@ -225,6 +228,16 @@
     border: none;
     font-weight: 700;
     transition: 200ms ease-in-out;
+}
+
+.card-body {
+    margin-top: 100px;
+    box-sizing: border-box;
+    height: var(--cardHeight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
 }
 
 /* PART 4 */

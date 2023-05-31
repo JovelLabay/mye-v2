@@ -29,11 +29,44 @@ for (i = 0; i < acc.length; i++) {
   panel.style.display = "none";
 }
 
-const circle = document.querySelector(".carousel");
+// const circle = document.querySelector(".carousel");
+
+// const handleScroll = function () {
+//   const scrollTop = window.pageYOffset;
+//   const parentHexa = document.querySelector("#the-parent");
+
+//   if (scrollTop < 800) {
+//     circle.classList.remove("hexa2");
+
+//     circle.classList.add("hexa1");
+//   } else if (scrollTop < 1000) {
+//     circle.classList.remove("hexa1");
+//     circle.classList.remove("hexa3");
+
+//     circle.classList.add("hexa2");
+//   } else if (scrollTop < 1100) {
+//     circle.classList.remove("hexa2");
+//     circle.classList.remove("hexa4");
+
+//     circle.classList.add("hexa3");
+
+//     parentHexa.classList.add("parent-curve");
+//   } else if (scrollTop < 1200) {
+//     circle.classList.remove("hexa3");
+
+//     circle.classList.add("hexa4");
+
+//     parentHexa.classList.remove("parent-curve");
+//   }
+// };
+
+// window.addEventListener("scroll", handleScroll);
+
+const circle = document.querySelector(".hexagon");
 
 const handleScroll = function () {
   const scrollTop = window.pageYOffset;
-  const parentHexa = document.querySelector("#the-parent");
+  const parentHexa = document.querySelector("#parent");
 
   if (scrollTop < 800) {
     circle.classList.remove("hexa2");
@@ -61,6 +94,29 @@ const handleScroll = function () {
 };
 
 window.addEventListener("scroll", handleScroll);
+
+window.addEventListener("scroll", stackCardsOnScroll);
+
+function stackCardsOnScroll() {
+  const cardStack = document.querySelector(".card-stack");
+  const cards = cardStack.querySelectorAll(".card");
+
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const stackTop = cardStack.offsetTop;
+  const windowHeight = window.innerHeight;
+
+  if (
+    scrollTop > stackTop - windowHeight &&
+    scrollTop < stackTop + cardStack.offsetHeight
+  ) {
+    const scrollPercentage =
+      (scrollTop - (stackTop - windowHeight)) / cardStack.offsetHeight;
+
+    cards.forEach((card, index) => {
+      card.style.transform = `translateY(${index * 100 * scrollPercentage}%)`;
+    });
+  }
+}
 
 const pop1 = document.querySelector("#pop-1");
 const pop1Content = document.querySelector("#pop1-content");
