@@ -308,34 +308,64 @@ function generateList() {
 
 function updateDetails(index) {
   var detailsDiv = document.getElementById("details");
+  var lottiePlayer = document.createElement("lottie-player");
+
+  lottiePlayer.setAttribute("background", "transparent");
+  lottiePlayer.setAttribute("speed", "1");
+  lottiePlayer.setAttribute("style", "width: 150px; height: 150px;");
+  lottiePlayer.setAttribute("loop", "");
+  lottiePlayer.setAttribute("autoplay", "");
 
   detailsDiv.innerHTML = "";
 
-  var imageElement = document.createElement("img");
-  imageElement.classList.add("animate");
-
-  if (index === 1) {
-    imageElement.src = "/public/images/prod1.gif";
+  if (index === 0) {
+    lottiePlayer.setAttribute(
+      "src",
+      "https://assets8.lottiefiles.com/packages/lf20_cioqsmkr.json"
+    );
+  } else if (index === 1) {
+    lottiePlayer.setAttribute(
+      "src",
+      "https://assets1.lottiefiles.com/packages/lf20_frJ5A7.json"
+    );
   } else if (index === 2) {
-    imageElement.src = "/public/images/prod2.gif";
+    lottiePlayer.setAttribute(
+      "src",
+      "https://assets9.lottiefiles.com/packages/lf20_7c0ljscf.json"
+    );
   } else if (index === 3) {
-    imageElement.src = "/public/images/prod3.png";
+    lottiePlayer.setAttribute(
+      "src",
+      "https://assets5.lottiefiles.com/packages/lf20_bewdaxyv.json"
+    );
   } else if (index === 4) {
-    imageElement.src = "/public/images/prod4.gif";
+    lottiePlayer.setAttribute(
+      "src",
+      "https://assets8.lottiefiles.com/packages/lf20_cioqsmkr.json"
+    );
   } else if (index === 5) {
-    imageElement.src = "/public/images/prod5.gif";
+    lottiePlayer.setAttribute(
+      "src",
+      "https://assets5.lottiefiles.com/packages/lf20_yYOpBn.json"
+    );
   } else if (index === 6) {
-    imageElement.src = "/public/images/prod6.gif";
+    lottiePlayer.setAttribute(
+      "src",
+      "https://assets2.lottiefiles.com/packages/lf20_YcYNEzLKJQ.json"
+    );
   } else if (index === 7) {
-    imageElement.src = "/public/images/prod7.gif";
-  } else if (index === 8) {
-    imageElement.src = "/public/images/prod8.gif";
+    lottiePlayer.setAttribute(
+      "src",
+      "https://assets2.lottiefiles.com/packages/lf20_BXCRXXXRJK.json"
+    );
   } else {
-    imageElement.src = "/public/images/prod1.gif";
+    lottiePlayer.setAttribute(
+      "src",
+      "https://assets3.lottiefiles.com/private_files/lf30_Sjku9h.json"
+    );
   }
-  imageElement.alt = "Title Image";
 
-  detailsDiv.appendChild(imageElement);
+  detailsDiv.appendChild(lottiePlayer);
 
   var nameElement = document.createElement("h3");
   nameElement.textContent = items[index].name;
