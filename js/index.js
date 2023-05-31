@@ -72,22 +72,26 @@ const handleScroll = function () {
     circle.classList.remove("hexa2");
 
     circle.classList.add("hexa1");
-  } else if (scrollTop < 1000) {
+  } else if (scrollTop < 900) {
     circle.classList.remove("hexa1");
     circle.classList.remove("hexa3");
 
     circle.classList.add("hexa2");
-  } else if (scrollTop < 1100) {
+  } else if (scrollTop < 1000) {
     circle.classList.remove("hexa2");
     circle.classList.remove("hexa4");
 
     circle.classList.add("hexa3");
-
-    parentHexa.classList.add("parent-curve");
-  } else if (scrollTop < 1200) {
+  } else if (scrollTop < 1100) {
     circle.classList.remove("hexa3");
+    circle.classList.remove("hexa5");
 
     circle.classList.add("hexa4");
+    parentHexa.classList.add("parent-curve");
+  } else if (scrollTop < 1200) {
+    circle.classList.remove("hexa4");
+
+    circle.classList.add("hexa5");
 
     parentHexa.classList.remove("parent-curve");
   }
