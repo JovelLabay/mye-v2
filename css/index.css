@@ -568,14 +568,16 @@
 .popup-content1,
 .popup-content2,
 .popup-content3,
-.popup-content4 {
+.popup-content4,
+.popup-content5 {
     display: none;
 }
 
 .popup-content1-show h2,
 .popup-content2-show h2,
 .popup-content3-show h2,
-.popup-content4-show h2 {
+.popup-content4-show h2,
+.popup-content5-show h2 {
     margin-bottom: 10px;
 }
 
@@ -585,8 +587,8 @@
     position: absolute;
     top: 32%;
     left: 38%;
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     cursor: pointer;
     position: relative;
     z-index: 20;
@@ -647,10 +649,10 @@
 
 .part-8 .mt-1 .one .image-container #pop-2 {
     position: absolute;
-    top: 31%;
+    top: 41%;
     right: 37%;
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     cursor: pointer;
     z-index: 20;
 }
@@ -670,8 +672,8 @@
 
 .popup-content2-show {
     position: absolute;
-    top: 20%;
-    left: 180px;
+    top: 15%;
+    left: 140px;
     min-height: 100px;
     min-width: 350px;
     border-radius: 20px;
@@ -713,8 +715,8 @@
     position: absolute;
     top: 60%;
     left: 50%;
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     cursor: pointer;
     z-index: 20;
 }
@@ -736,7 +738,7 @@
     position: absolute;
     right: -350px;
     min-height: 100px;
-    min-width: 250px;
+    min-width: 300px;
     border-radius: 20px;
     padding: 30px;
     display: block;
@@ -774,8 +776,8 @@
     position: absolute;
     top: 15%;
     left: 50%;
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     cursor: pointer;
     z-index: 20;
 }
@@ -796,9 +798,9 @@
 .popup-content4-show {
     position: absolute;
     top: -20px;
-    left: 200px;
+    left: 150px;
     min-height: 100px;
-    min-width: 250px;
+    min-width: 300px;
     border-radius: 20px;
     padding: 30px;
     display: block;
@@ -821,6 +823,68 @@
     background-color: var(--main-color);
     position: absolute;
     top: 15.5%;
+    left: 50.2%;
+    border-radius: 9999px;
+    width: 20px;
+    height: 20px;
+    z-index: 9;
+    display: none;
+}
+
+/* POP 5 */
+
+.part-8 .mt-1 .one .image-container #pop-5 {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.part-8 .mt-1 .one .image-container #dot-5 {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: var(--main-color);
+    border-radius: 9999px;
+    box-shadow: 0px 0px 6px 6px rgba(77, 223, 171, 0.6);
+    animation: blink 1s ease-in-out infinite;
+    position: absolute;
+    z-index: 9;
+    top: 45%;
+    left: 50%;
+}
+
+.popup-content5-show {
+    position: absolute;
+    top: -30px;
+    left: 150px;
+    min-height: 100px;
+    min-width: 250px;
+    border-radius: 20px;
+    padding: 30px;
+    display: block;
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+#dot-5-line {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 47%;
+    left: 51%;
+    width: 140px;
+    height: 5px;
+    z-index: 20;
+    display: none;
+}
+
+#dot-5-round {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 45.4%;
     left: 50.2%;
     border-radius: 9999px;
     width: 20px;

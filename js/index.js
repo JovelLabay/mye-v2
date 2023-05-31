@@ -130,6 +130,9 @@ const pop3Content = document.querySelector("#pop3-content");
 const pop4 = document.querySelector("#pop-4");
 const pop4Content = document.querySelector("#pop4-content");
 
+const pop5 = document.querySelector("#pop-5");
+const pop5Content = document.querySelector("#pop5-content");
+
 pop1.addEventListener("mouseenter", () => {
   pop1Content.classList.add("popup-content1-show");
   document.querySelector("#dot-1-line").style.display = "block";
@@ -172,6 +175,17 @@ pop4.addEventListener("mouseout", () => {
   pop4Content.classList.remove("popup-content4-show");
   document.querySelector("#dot-4-line").style.display = "none";
   document.querySelector("#dot-4-round").style.display = "none";
+});
+
+pop5.addEventListener("mouseenter", () => {
+  pop5Content.classList.add("popup-content5-show");
+  document.querySelector("#dot-5-line").style.display = "block";
+  document.querySelector("#dot-5-round").style.display = "block";
+});
+pop5.addEventListener("mouseout", () => {
+  pop5Content.classList.remove("popup-content5-show");
+  document.querySelector("#dot-5-line").style.display = "none";
+  document.querySelector("#dot-5-round").style.display = "none";
 });
 
 // Array object containing the data
