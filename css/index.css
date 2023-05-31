@@ -587,8 +587,8 @@
     position: absolute;
     top: 32%;
     left: 38%;
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
     cursor: pointer;
     position: relative;
     z-index: 20;
@@ -649,10 +649,10 @@
 
 .part-8 .mt-1 .one .image-container #pop-2 {
     position: absolute;
-    top: 41%;
+    top: 46%;
     right: 37%;
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
     cursor: pointer;
     z-index: 20;
 }
@@ -672,8 +672,8 @@
 
 .popup-content2-show {
     position: absolute;
-    top: 15%;
-    left: 140px;
+    top: -60%;
+    left: 120px;
     min-height: 100px;
     min-width: 350px;
     border-radius: 20px;
@@ -713,10 +713,10 @@
 .part-8 .mt-1 .one .image-container #pop-3 {
     transform: translate(-50%, -50%);
     position: absolute;
-    top: 60%;
-    left: 50%;
-    height: 50px;
-    width: 50px;
+    top: 62%;
+    left: 51%;
+    height: 25px;
+    width: 25px;
     cursor: pointer;
     z-index: 20;
 }
@@ -736,7 +736,8 @@
 
 .popup-content3-show {
     position: absolute;
-    right: -350px;
+    top: -40px;
+    left: 100px;
     min-height: 100px;
     min-width: 300px;
     border-radius: 20px;
@@ -774,10 +775,10 @@
 .part-8 .mt-1 .one .image-container #pop-4 {
     transform: translate(-50%, -50%);
     position: absolute;
-    top: 15%;
-    left: 50%;
-    height: 50px;
-    width: 50px;
+    top: 17.5%;
+    left: 51%;
+    height: 25px;
+    width: 25px;
     cursor: pointer;
     z-index: 20;
 }
@@ -836,10 +837,10 @@
 .part-8 .mt-1 .one .image-container #pop-5 {
     transform: translate(-50%, -50%);
     position: absolute;
-    top: 45%;
-    left: 50%;
-    height: 50px;
-    width: 50px;
+    top: 47.5%;
+    left: 51%;
+    height: 25px;
+    width: 25px;
     cursor: pointer;
     z-index: 20;
 }
