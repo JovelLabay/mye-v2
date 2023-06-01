@@ -42,7 +42,9 @@ window.addEventListener("scroll", () => {
     blogsNews.classList.add("blue-link");
     join.classList.add("blue-link");
     contact.classList.add("blue-link");
-    login.classList.add("login-bg");
+
+    login.classList.add("login-bg-gradient");
+    login.classList.remove("login-bg-white");
   } else {
     navBar.classList.remove("shadow");
 
@@ -52,6 +54,8 @@ window.addEventListener("scroll", () => {
     blogsNews.classList.remove("blue-link");
     join.classList.remove("blue-link");
     contact.classList.remove("blue-link");
-    login.classList.remove("login-bg");
+
+    login.classList.remove("login-bg-gradient");
+    login.classList.add("login-bg-white");
   }
 });

@@ -99,28 +99,28 @@ const handleScroll = function () {
 
 window.addEventListener("scroll", handleScroll);
 
-window.addEventListener("scroll", stackCardsOnScroll);
+// window.addEventListener("scroll", stackCardsOnScroll);
 
-function stackCardsOnScroll() {
-  const cardStack = document.querySelector(".card-stack");
-  const cards = cardStack.querySelectorAll(".card");
+// function stackCardsOnScroll() {
+//   const cardStack = document.querySelector(".card-stack");
+//   const cards = cardStack.querySelectorAll(".card");
 
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  const stackTop = cardStack.offsetTop;
-  const windowHeight = window.innerHeight;
+//   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//   const stackTop = cardStack.offsetTop;
+//   const windowHeight = window.innerHeight;
 
-  if (
-    scrollTop > stackTop - windowHeight &&
-    scrollTop < stackTop + cardStack.offsetHeight
-  ) {
-    const scrollPercentage =
-      (scrollTop - (stackTop - windowHeight)) / cardStack.offsetHeight;
+//   if (
+//     scrollTop > stackTop - windowHeight &&
+//     scrollTop < stackTop + cardStack.offsetHeight
+//   ) {
+//     const scrollPercentage =
+//       (scrollTop - (stackTop - windowHeight)) / cardStack.offsetHeight;
 
-    cards.forEach((card, index) => {
-      card.style.transform = `translateY(${index * 100 * scrollPercentage}%)`;
-    });
-  }
-}
+//     cards.forEach((card, index) => {
+//       card.style.transform = `translateY(${index * 100 * scrollPercentage}%)`;
+//     });
+//   }
+// }
 
 const pop1 = document.querySelector("#pop-1");
 const pop1Content = document.querySelector("#pop1-content");

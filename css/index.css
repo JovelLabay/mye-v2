@@ -23,6 +23,7 @@
     justify-content: start;
     align-self: start;
     gap: 30px;
+    margin-right: -100px;
 }
 
 .part-1 .mt-1 img {
@@ -68,7 +69,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    padding-top: 50px;
+    margin-bottom: 100px;
     color: var(--violet-color);
     gap: 30px;
 }
@@ -83,18 +85,21 @@
     width: 50%;
 }
 
-.part-2 button {
-    border-radius: 9999px;
-    padding: 10px 60px;
+.part-2 .mt-1 button {
+    width: 180px;
     border: none;
-    font-weight: bold;
+    background: linear-gradient(90.37deg, #22D2FF -1.83%, #5F84FE 48.99%, #9F39FF 99.8%);
     color: #fff;
-    background: linear-gradient(90deg, #29C7FF -0.02%, #5E85FD 55.71%, #BD76FF 99.98%);
+    padding: 7px 0;
+    border-radius: 9999px;
+    font-weight: bold;
+    margin-top: 10px;
     transition: 200ms ease-in-out;
 }
 
-.part-2 button:hover {
-    background: var(--violet-color)
+.part-2 .mt-1 button:hover {
+    cursor: pointer;
+    background: var(--violet-color);
 }
 
 /* ---- */
@@ -238,6 +243,13 @@
     border: none;
     font-weight: 700;
     transition: 200ms ease-in-out;
+}
+
+#card1 .card-body div button:hover,
+#card2 .card-body div button:hover,
+#card3 .card-body div button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
 .card-body {
