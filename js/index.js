@@ -122,6 +122,16 @@ window.addEventListener("scroll", handleScroll);
 //   }
 // }
 
+const lala = document.querySelectorAll(".part-7 .grid-services li button");
+
+lala.forEach((item) => {
+  item.addEventListener("click", () => {
+    document.querySelector(".part-6").scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
+
 const pop1 = document.querySelector("#pop-1");
 const pop1Content = document.querySelector("#pop1-content");
 
