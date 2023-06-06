@@ -122,7 +122,7 @@ window.addEventListener("scroll", handleScroll);
 //   }
 // }
 
-const lala = document.querySelectorAll(".part-7 .grid-services li button");
+const lala = document.querySelectorAll(".part-21 .grid-services li button");
 
 lala.forEach((item) => {
   item.addEventListener("click", () => {
