@@ -732,6 +732,7 @@
     background-color: var(--main-color);
     box-shadow: 0px 8px 24px rgba(9, 115, 186, 0.2);
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    width: 300px;
 }
 
 #dot-1-line {
@@ -795,6 +796,7 @@
     background-color: var(--main-color);
     box-shadow: 0px 8px 24px rgba(9, 115, 186, 0.2);
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    width: 400px;
 }
 
 #dot-2-line {
@@ -857,6 +859,7 @@
     display: block;
     color: #fff;
     background-color: var(--main-color);
+    width: 400px;
 }
 
 #dot-3-line {
@@ -919,6 +922,7 @@
     display: block;
     color: #fff;
     background-color: var(--main-color);
+    width: 450px;
 }
 
 #dot-4-line {
@@ -981,6 +985,7 @@
     display: block;
     color: #fff;
     background-color: var(--main-color);
+    width: 400px;
 }
 
 #dot-5-line {
