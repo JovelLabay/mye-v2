@@ -181,12 +181,28 @@
     padding-right: calc(var(--index) * var(--cardTopPadding));
 }
 
-#card1 .card-body,
-#card2 .card-body,
-#card3 .card-body {
+#card1 .card-body {
     height: 90vh;
     color: #fff;
     background-image: url("/public/images/bg-join-3.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#card2 .card-body {
+    height: 90vh;
+    color: #fff;
+    background-image: url("/public/images/bg-join-5.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#card3 .card-body {
+    height: 90vh;
+    color: #fff;
+    background-image: url("/public/images/bg-join-6.jpg");
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
