@@ -366,7 +366,8 @@
 }
 
 /* THE PARENT */
-/* Removed background image */
+
+/* Rmove bg image */
 .carousel-item {
   margin-top: 85px;
   height: 70vh;
@@ -375,8 +376,7 @@
   background-size: cover;
   position: relative;
 }
-
-/* Newly added CSS for different images */
+/* Added different images for slideshow */
 .image1 {
   background-image: url("/public/images/bg-join-3.png");
 }
