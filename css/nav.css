@@ -36,15 +36,21 @@
     font-weight: bold;
     transition: 300ms;
     text-decoration: none;
-    color: #fff;
+    /* color: #fff; */
+    color: #2D2D2D;
 }
 
 .login-bg-white {
     padding: 10px 20px;
     border-radius: 9999px;
     border: none;
-    background: #fff;
-    color: var(--violet-color) !important;
+    /* background: #fff; */
+    background-color: #2D2D2D;
+    /* color: var(--violet-color) !important; */
+}
+
+#login {
+    color: #fff;
 }
 
 .login-bg-white:hover {

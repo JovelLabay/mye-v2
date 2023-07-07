@@ -68,33 +68,33 @@ const handleScroll = function () {
   const scrollTop = window.pageYOffset;
   const parentHexa = document.querySelector("#parent");
 
-  if (scrollTop < 800) {
-    circle.classList.remove("hexa2");
+  // if (scrollTop < 800) {
+  //   circle.classList.remove("hexa2");
 
-    circle.classList.add("hexa1");
-  } else if (scrollTop < 900) {
-    circle.classList.remove("hexa1");
-    circle.classList.remove("hexa3");
+  //   circle.classList.add("hexa1");
+  // } else if (scrollTop < 900) {
+  //   circle.classList.remove("hexa1");
+  //   circle.classList.remove("hexa3");
 
-    circle.classList.add("hexa2");
-  } else if (scrollTop < 1000) {
-    circle.classList.remove("hexa2");
-    circle.classList.remove("hexa4");
+  //   circle.classList.add("hexa2");
+  // } else if (scrollTop < 1000) {
+  //   circle.classList.remove("hexa2");
+  //   circle.classList.remove("hexa4");
 
-    circle.classList.add("hexa3");
-  } else if (scrollTop < 1100) {
-    circle.classList.remove("hexa3");
-    circle.classList.remove("hexa5");
+  //   circle.classList.add("hexa3");
+  // } else if (scrollTop < 1100) {
+  //   circle.classList.remove("hexa3");
+  //   circle.classList.remove("hexa5");
 
-    circle.classList.add("hexa4");
-    parentHexa.classList.add("parent-curve");
-  } else if (scrollTop < 1200) {
-    circle.classList.remove("hexa4");
+  //   circle.classList.add("hexa4");
+  //   parentHexa.classList.add("parent-curve");
+  // } else if (scrollTop < 1200) {
+  //   circle.classList.remove("hexa4");
 
-    circle.classList.add("hexa5");
+  //   circle.classList.add("hexa5");
 
-    parentHexa.classList.remove("parent-curve");
-  }
+  //   parentHexa.classList.remove("parent-curve");
+  // }
 };
 
 window.addEventListener("scroll", handleScroll);
@@ -208,14 +208,37 @@ var items = [
     name: "Backup and Recovery",
     title: "Title 1",
     details: [
-      "Automated Snapshots with Lifecycle Management",
-      "Automated Database Backup",
+      [
+        "Automated Snapshots with Lifecycle Management",
+        "Streamline data backup and retention process by automatically capturing and managing snapshots throughout their lifecycle.",
+      ],
+      [
+        "Automated Database Backup",
+        "Simplify data protection by consistently creating and organizing backups for seamless and reliable recovery.",
+      ],
     ],
   },
   {
     name: "Compute",
     title: "Title 2",
-    details: ["Elastic Virtual Machines", "Autoscaling"],
+    details: [
+      [
+        "Elastic Container Service",
+        "Highly scalable and flexible platform for deploying, managing, and orchestrating containerized applications effortlessly.",
+      ],
+      [
+        "Container Registry",
+        "Secure and centralized repository for storing, managing, and distributing container images.",
+      ],
+      [
+        "Resource Orchestration Automation",
+        "Streamlined management and automation of resources, optimizing efficiency and productivity across complex environments.",
+      ],
+      [
+        "API Gateway",
+        "Scalable API Gateway for managing, securing, and orchestrating API traffic.",
+      ],
+    ],
   },
   {
     name: "Containers, Development, and Automation",
@@ -224,8 +247,8 @@ var items = [
       "Elastic Container Service",
       "Container Registry",
       "Enterprise Message Queues",
-      "Resource Orchestration Automation (native, and Terraform)",
-      "API Gateway",
+      // "Resource Orchestration Automation (native, and Terraform)",
+      // "API Gateway",
     ],
   },
   {
@@ -375,13 +398,13 @@ function updateDetails(index) {
     );
   }
 
-  detailsDiv.appendChild(lottiePlayer);
+  // detailsDiv.appendChild(lottiePlayer);
 
   var nameElement = document.createElement("h3");
   nameElement.textContent = items[index].name;
   nameElement.classList.add("animate");
 
-  detailsDiv.appendChild(nameElement);
+  // detailsDiv.appendChild(nameElement);
 
   var details = items[index].details;
 
@@ -392,10 +415,26 @@ function updateDetails(index) {
 
   details.forEach(function (detail) {
     var li = document.createElement("li");
-    li.textContent = detail;
+    // li.textContent = detail[0];
     ul.appendChild(li);
     li.classList.add("animate");
     li.classList.add("details-prod-child");
+
+    var img = document.createElement("img");
+    var title = document.createElement("h5");
+    var desc = document.createElement("p");
+
+    title.textContent = detail[0];
+    desc.textContent = detail[1];
+    img.src = "/public/icons/accord1.png";
+
+    li.appendChild(img);
+    li.appendChild(title);
+    li.appendChild(desc);
+
+    title.classList.add("product-title");
+    img.classList.add("product-img");
+    img.alt = "product-img";
   });
 
   detailsDiv.appendChild(ul);

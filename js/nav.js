@@ -36,15 +36,15 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > 0) {
     navBar.classList.add("shadow");
 
-    home.classList.add("blue-link");
-    proSer.classList.add("blue-link");
-    about.classList.add("blue-link");
-    blogsNews.classList.add("blue-link");
-    join.classList.add("blue-link");
-    contact.classList.add("blue-link");
+    // home.classList.add("blue-link");
+    // proSer.classList.add("blue-link");
+    // about.classList.add("blue-link");
+    // blogsNews.classList.add("blue-link");
+    // join.classList.add("blue-link");
+    // contact.classList.add("blue-link");
 
-    login.classList.add("login-bg-gradient");
-    login.classList.remove("login-bg-white");
+    // login.classList.add("login-bg-gradient");
+    // login.classList.remove("login-bg-white");
   } else {
     navBar.classList.remove("shadow");
 
@@ -55,7 +55,7 @@ window.addEventListener("scroll", () => {
     join.classList.remove("blue-link");
     contact.classList.remove("blue-link");
 
-    login.classList.remove("login-bg-gradient");
-    login.classList.add("login-bg-white");
+    // login.classList.remove("login-bg-gradient");
+    // login.classList.add("login-bg-white");
   }
 });
