@@ -544,3 +544,12 @@ function expandItem() {
 logoItems.forEach((item) => {
   item.addEventListener("click", expandItem);
 });
+
+// Auto sliding for slideshow
+document.addEventListener("DOMContentLoaded", function () {
+  var carousel = document.getElementById("carouselExampleIndicators");
+  var carouselInstance = new bootstrap.Carousel(carousel, {
+    interval: 3000,
+    wrap: true,
+  });
+});
