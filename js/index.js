@@ -223,6 +223,20 @@ var items = [
     title: "Title 2",
     details: [
       [
+        "Elastic Virtual Machines",
+        "Flexible cloud-based virtual machines that adapt to changing resource demands.",
+      ],
+      [
+        "Autoscaling",
+        "Dynamic resource allocation that adjusts to meet fluctuating workload demands.",
+      ],
+    ],
+  },
+  {
+    name: "Containers, Development, and Automation",
+    title: "Title 3",
+    details: [
+      [
         "Elastic Container Service",
         "Highly scalable and flexible platform for deploying, managing, and orchestrating containerized applications effortlessly.",
       ],
@@ -237,20 +251,6 @@ var items = [
       [
         "API Gateway",
         "Scalable API Gateway for managing, securing, and orchestrating API traffic.",
-      ],
-    ],
-  },
-  {
-    name: "Containers, Development, and Automation",
-    title: "Title 3",
-    details: [
-      [
-        "Lorem ipsum dolor sit amet consectetur",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae rerum id magni odio nesciunt similique saepe quia odit! Accusamus.",
-      ],
-      [
-        "Lorem ipsum dolor sit amet consectetur",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae rerum id magni odio nesciunt similique saepe quia odit! Accusamus.",
       ],
     ],
   },
