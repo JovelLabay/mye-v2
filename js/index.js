@@ -244,58 +244,98 @@ var items = [
     name: "Containers, Development, and Automation",
     title: "Title 3",
     details: [
-      "Elastic Container Service",
-      "Container Registry",
-      "Enterprise Message Queues",
-      // "Resource Orchestration Automation (native, and Terraform)",
-      // "API Gateway",
+      [
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae rerum id magni odio nesciunt similique saepe quia odit! Accusamus.",
+      ],
+      [
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae rerum id magni odio nesciunt similique saepe quia odit! Accusamus.",
+      ],
     ],
   },
   {
     name: "Database",
     title: "Title 2",
-    details: ["Relational Database - MySQL", "Redis"],
+    details: [
+      [
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae rerum id magni odio nesciunt similique saepe quia odit! Accusamus.",
+      ],
+      [
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae rerum id magni odio nesciunt similique saepe quia odit! Accusamus.",
+      ],
+    ],
   },
   {
     name: "Logging",
     title: "Title 2",
     details: [
-      "Enterprise Log Service",
-      "Enterprise Application Real-Time Monitoring",
+      [
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae rerum id magni odio nesciunt similique saepe quia odit! Accusamus.",
+      ],
+      [
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae rerum id magni odio nesciunt similique saepe quia odit! Accusamus.",
+      ],
     ],
   },
   {
     name: "Migration",
     title: "Title 2",
-    details: ["Database Migration Service (SQL, and noSQL)"],
+    details: [
+      [
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae rerum id magni odio nesciunt similique saepe quia odit! Accusamus.",
+      ],
+      [
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae rerum id magni odio nesciunt similique saepe quia odit! Accusamus.",
+      ],
+    ],
   },
   {
     name: "Networking",
     title: "Title 2",
     details: [
-      "L3 and L7 Load Balancer",
-      "Virtual Private Cloud",
-      "NAT Gateway",
-      "DNS",
+      [
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae rerum id magni odio nesciunt similique saepe quia odit! Accusamus.",
+      ],
+      [
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae rerum id magni odio nesciunt similique saepe quia odit! Accusamus.",
+      ],
     ],
   },
   {
     name: "Security",
     title: "Title 2",
     details: [
-      "Firewall and Security Groups",
-      "Web Application Firewall",
-      "Network Traffic Detection and Response",
-      "Security Operations Center",
+      [
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae rerum id magni odio nesciunt similique saepe quia odit! Accusamus.",
+      ],
+      [
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae rerum id magni odio nesciunt similique saepe quia odit! Accusamus.",
+      ],
     ],
   },
   {
     name: "Storage",
     title: "Title 2",
     details: [
-      "Elastic Block Storage",
-      "Object Storage",
-      "Distributed File System",
+      [
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae rerum id magni odio nesciunt similique saepe quia odit! Accusamus.",
+      ],
+      [
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae rerum id magni odio nesciunt similique saepe quia odit! Accusamus.",
+      ],
     ],
   },
 ];
